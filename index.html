@@ -1,0 +1,355 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script type="text/javascript" src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js">
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/eventemitter2@5.0.1/lib/eventemitter2.min.js">
+	</script>
+	<script type="text/javascript" src="https://static.robotwebtools.org/mjpegcanvasjs/current/mjpegcanvas.min.js">
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/vue">
+
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script type="text/javascript" src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js">
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/vue">
+
+	</script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		/* Three image containers (use 25% for four, and 50% for two, etc) */
+		.column {
+			float: left;
+			width: 33.33%;
+			padding: 5px;
+		}
+
+		/* Clear floats after image containers */
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+
+
+
+
+
+
+
+
+		.icon-bar {
+			width: 100%;
+			background-color: #555;
+			overflow: auto;
+		}
+
+		.icon-bar a {
+			float: left;
+			width: 20%;
+			text-align: center;
+			padding: 12px 0;
+			transition: all 0.3s ease;
+			color: white;
+			font-size: 36px;
+		}
+
+		.icon-bar a:hover {
+			background-color: #000;
+		}
+
+		.active {
+			background-color: #4CAF50;
+		}
+
+		body,
+		html {
+			height: 100%;
+			margin: 0;
+			font: 400 15px/1.8 "Lato", sans-serif;
+			color: #777;
+		}
+
+		.bgimg-1,
+		.bgimg-2,
+		.bgimg-3 {
+			position: relative;
+			opacity: 0.95;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+		}
+
+		.bgimg-1 {
+			background-image: url("https://dynamic.brandcrowd.com/preview/logodraft/cba046ed-1864-4c62-8f28-bcbadea71663/image/large.png");
+			min-height: 80%;
+		}
+
+		.bgimg-2 {
+			background-image: url("https://www.longisland.com/site_media/images/article/subarticle_image/firefighter-2679283_640_1.jpg");
+			min-height: 300px;
+			opacity: 0.8;
+		}
+
+		.bgimg-3 {
+			background-image: url("https://lh3.googleusercontent.com/proxy/pKV7YD88wOiF3lyRJn8ReXvmtTrzXHIcdNhUwJvHQrJV4nSlmrGKBcUkW19QvB1Aq0Ncr8S5p-9gAVOu4xrvnPF1JSkeh-uh4mibe0Q1GP1LDa2ukXFdTChlog");
+			min-height: 200px;
+		}
+
+		div.m {
+			position: relative;
+			left: 0;
+			top: 50%;
+			width: 100%;
+			text-align: center;
+			color: #000;
+			font-family: 'Caveat';
+			font-size: 28px;
+
+
+		}
+
+		.caption {
+			position: relative;
+			left: 0;
+			top: 50%;
+			width: 100%;
+			text-align: center;
+			color: #000;
+
+		}
+
+		.caption span.border {
+			background-color: #111;
+			color: #fff;
+			padding: 18px;
+			font-size: 25px;
+			letter-spacing: 10px;
+		}
+
+		h3 {
+			letter-spacing: 5px;
+			text-transform: uppercase;
+			font: 20px "Lato", sans-serif;
+			color: #111;
+		}
+
+		/* Turn off parallax scrolling for tablets and phones */
+		@media only screen and (max-device-width: 1024px) {
+
+			.bgimg-1,
+			.bgimg-2,
+			.bgimg-3 {
+				background-attachment: scroll;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+
+
+
+
+	<div class="icon-bar">
+		<a class="active" href="#"><i class="fa fa-home"></i></a>
+		<a href="#"><i class="fa fa-search"></i></a>
+		<a href="#"><i class="fa fa-envelope"></i></a>
+		<a href="#"><i class="fa fa-cloud"></i></a>
+		<a href="#"><i class="fa fa-globe"></i></a>
+
+
+	</div>
+	<div class="bgimg-1">
+		<div class="caption">
+
+			<marquee behavior="scroll" direction="left">
+				<span class="border">WELCOME TO OUR DASHBOARD</span>
+			</marquee>
+
+		</div>
+	</div>
+	</div>
+
+	<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+		<div class="row">
+			<div class="column">
+				<img src="https://www.kindpng.com/picc/m/373-3739794_cartoon-illustration-of-six-wheeled-rover-on-the.png" alt="Robot" style="width:60%">
+				<h4>CONTROL</h4>
+				<p>Navigate the Robot using the Joystick</p>
+			</div>
+			<div class="column">
+				<img src="https://i1.wp.com/pwpl.org/wp-content/uploads/camera-clipart.jpg?ssl=1" alt="Camera" style="width:50%">
+
+				<h4>CAMERA FEED</h4>
+				<p>Watch the feed of camera installed on robot</p>
+			</div>
+			<div class="column">
+				<img src="https://octomap.github.io/newcol_big.png" alt="Map" style="width:95%">
+				<h4>MAPPING</h4>
+				<p>Get the map of the environment using SLAM</p>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+	<div id="app" class="container-fluid">
+		<div class="bgimg-2">
+
+
+			<div class="container">
+
+				<div class="row" style="max-height:200px;">
+					<div class="col-md-6">
+						<br>
+						<h2 style="color:white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONNECTION STATUS
+						</h2>
+						<p class="text-danger" v-if="!connected">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not
+							connected!</p>
+						<p class="text-success" v-if="connected">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connected!
+						</p>
+						<div class="alert alert-info" role="alert"><label>Websocket Server Address &nbsp;
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		</label>&nbsp;
+							&nbsp;
+
+							<input type="text"v-model="ws_address"/></div>
+							<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<button :disabled="loading" class="btn btn-danger" @click="disconnect" v-if="connected">Disconnect!</button>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button :disabled="loading" class="btn btn-success" @click="connect" v-else>Connect!</button>
+						</div>
+						<div class="col-md-6" style="max-height:200px; overflow:auto;">
+							<br>
+							<h2 style="color:white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOG MESSAGES</h2>
+							<div>
+								<p v-for="log of logs">{{ log }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div style="position:relative;">
+				<div
+					style="color:#ddd;background-color:#282E34;text-align:center;padding:30px 80px;text-align: justify;">
+					<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOYSTICK
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CAMERA FEED</h4>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 row">
+					<div class="col-md-12 text-center">
+						<br>
+						<h3>COMMANDS</h3>
+					</div>
+
+					<!-- 1st row -->
+					<div class="col-md-12 text-center">
+						<button @click="forward" :disabled="loading || !connected" class="btn btn-primary">FORWARD</button>
+						<br><br>
+                </div>
+
+						<!-- 2nd row -->
+						<div class="col-md-4 text-center">
+							<button @click="turnLeft" :disabled="loading || !connected" class="btn btn-primary">LEFT</button>
+						</div>
+						<div class="col-md-4 text-center">
+
+							<button @click="stop" :disabled="loading || !connected" class="btn btn-danger" onclick="myFunction()">STOP</button>
+							<br>
+							<br>
+                </div>
+							<div class="col-md-4 text-center">
+								<button @click="turnRight" :disabled="loading || !connected" class="btn btn-primary">RIGHT</button>
+							</div>
+
+							<!-- 3rd row -->
+							<div class="col-md-12 text-center">
+								<button @click="backward" :disabled="loading || !connected" class="btn btn-primary">BACKWARD</button>
+							</div>
+						</div>
+						<br>
+						<div class="col-md-6">
+							<div id="mjpeg"></div>
+						</div>
+					</div>
+				</div>
+				<br>
+
+
+				<script>
+					function myFunction() {
+  setTimeout(function(){ alert("NO HARMFUL GAS DETECTED!"); }, 3000);
+}
+				</script>
+
+				<div style="position:relative;">
+					<div
+						style="color:#ddd;background-color:#282E34;text-align:center;padding:30px 80px;text-align: justify;">
+
+						<h4 style="text-align:center">MEET OUR TEAM</h4>
+					</div>
+				</div>
+				<div class="bgimg-3">
+					<div class="m">
+						<br>
+						<h3 style="text-align:center">DIVYA PANT
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ANANYA
+							SONKAR
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RUSHALI
+							KHILRANI
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+							<br><br>YUKTA YADAV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEEPSHIKHA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNNATI
+					</h3>
+					</div>
+				</div>
+
+				<div style="position:relative;">
+					<div
+						style="color:#ddd;background-color:#282E34;text-align:center;padding:20px 60px;text-align: justify;">
+
+						<h4 style="text-align:center; colour:white">CONTACT US</h4>
+
+						<br>
+						<h3 style="text-align:center; color:white">wominers@gmail.com</h3>
+
+					</div>
+				</div>
+
+
+
+
+				<script type="text/javascript" src="main.js">
+
+				</script>
+</body>
+
+</html>
