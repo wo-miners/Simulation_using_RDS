@@ -59,9 +59,10 @@ var app = new Vue({
         forward: function () {
             this.message = new ROSLIB.Message({
 
-                linear: { x: 1, y: 0, z: 0, },
+                linear: { x: 2, y: 0, z: 0, },
                 angular: { x: 0, y: 0, z: 0, },
             })
+            // increasing the linear speed
             this.setTopic()
             this.topic.publish(this.message)
         },
@@ -77,24 +78,25 @@ var app = new Vue({
         backward: function () {
             this.message = new ROSLIB.Message({
 
-                linear: { x: -1, y: 0, z: 0, },
+                linear: { x: -2, y: 0, z: 0, },
                 angular: { x: 0, y: 0, z: 0, },
             })
+            // increasing the backward speed
             this.setTopic()
             this.topic.publish(this.message)
         },
         turnLeft: function () {
             this.message = new ROSLIB.Message({
-                linear: { x: 0.5, y: 0, z: 0, },
-                angular: { x: 0, y: 0, z: 0.5, },
+                linear: { x: 1, y: 0, z: 0, },
+                angular: { x: 0, y: 0, z: 1, },
             })
             this.setTopic()
             this.topic.publish(this.message)
         },
         turnRight: function () {
             this.message = new ROSLIB.Message({
-                linear: { x: 0.5, y: 0, z: 0, },
-                angular: { x: 0, y: 0, z: -0.5, },
+                linear: { x: 1, y: 0, z: 0, },
+                angular: { x: 0, y: 0, z: -1, },
             })
             this.setTopic()
             this.topic.publish(this.message)
